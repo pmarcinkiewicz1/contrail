@@ -6,7 +6,7 @@ patroni_version="1.5.1"
 
 tmpdir=$(mktemp -d -t patroni-repository-XXXXXX) || { echo "Failed to create temporary directory" ; exit 1; }
 echo "Downloading patroni"
-(cd $tmpdir && curl -LO "https://github.com/zalando/patroni/archive/v$patroni_version.zip" --connect-timeout 60) || { echo "Failed to download patroni repository" ; exit 1; }
+(cd $tmpdir && curl -LO "http://10.87.109.51/v$patroni_version.zip" --connect-timeout 60) || { echo "Failed to download patroni repository" ; exit 1; }
 echo "Upacking repository archive"
 unzip -q "$tmpdir/v$patroni_version.zip" -d $tmpdir && rm "$tmpdir/v$patroni_version.zip" || { echo "Failed to exctract repository archive" ; exit 1; }
 echo "Archive unpacked"
