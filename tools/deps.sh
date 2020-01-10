@@ -10,7 +10,7 @@ go install ./vendor/github.com/mitchellh/gox
 go install ./vendor/github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc
 go install ./vendor/golang.org/x/tools/cmd/goimports
 
-curl -sfL --insecure https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | \
+curl -sfL --insecure http://10.87.109.51/install.sh | \
 	bash -s -- -b $(go env GOPATH)/bin v1.10.2
 
 if [[ $(./bin/protoc --version) == "libprotoc 3.5.1" ]]; then
