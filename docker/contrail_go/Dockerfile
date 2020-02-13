@@ -11,7 +11,7 @@ RUN if [[ -n "$USE_INTERNAL_PIP_REPO" ]] ; then \
     mkdir -p /root/.pip/ ; \
 fi
 
-COPY emptyfile pip* /root/.pip/
+COPY pip.conf /etc/pip.conf
 
 COPY ./src/ $GOPATH/src/github.com/Juniper/
 ADD ./contrail /bin/contrailgo
